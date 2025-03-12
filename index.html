@@ -14,15 +14,16 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      font-size: 18px; /* Increased base font size */
+      font-size: 18px;
     }
     .header {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 30px 40px; /* Increased padding to push separator down */
+      padding: 30px 40px;
       border-bottom: 2px solid #ff9aa2;
       gap: 50px;
+      flex-wrap: wrap; /* Allows items to stack when needed */
     }
     .title-container {
       display: flex;
@@ -30,29 +31,49 @@
       align-items: center;
     }
     .header .title {
-      font-size: 42px; /* Increased title size */
+      font-size: 42px;
       font-weight: bold;
       color: #333;
-      text-decoration: none; /* Removes default underline for links */
+      text-decoration: none;
     }
     .header .title:hover {
-      text-decoration: underline; /* Adds underline on hover for clarity */
+      text-decoration: underline;
     }
     .header .tagline {
-      font-size: 17px; /* Increased tagline size */
+      font-size: 17px;
       color: #555;
       font-style: italic;
       margin-top: 8px;
     }
+    .nav-container {
+      display: flex;
+      gap: 20px;
+    }
+    .header nav {
+      display: flex;
+      gap: 20px;
+    }
     .header nav a {
-      margin-left: 20px;
       text-decoration: none;
-      font-size: 24px; /* Increased nav link size */
+      font-size: 24px;
       font-weight: bold;
       color: #ff4081;
     }
     .header nav a:hover {
       text-decoration: underline;
+    }
+
+    /* Mobile-friendly navigation */
+    @media (max-width: 800px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+      .header nav {
+        flex-direction: column; /* Stack links */
+        gap: 10px;
+      }
     }
     
     .main-content {
@@ -78,7 +99,7 @@
       min-height: 60px;
       text-align: center;
       padding: 15px;
-      font-size: 28px; /* Increased section text size */
+      font-size: 28px;
       font-weight: bold;
       color: #333;
       border-radius: 10px;
@@ -101,7 +122,7 @@
   <div class="header">
     <div class="title-container">
       <a href="index.html" class="title">Dealing With Uncertainty</a>
-      <div class="tagline">Clear and practical guides for evidence-based decision making</div>
+      <div class="tagline">Clear and practical guides for evidence-based decision-making</div>
     </div>
     <nav>
       <a href="#about">About</a>
