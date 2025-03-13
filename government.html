@@ -6,8 +6,9 @@
   <title>Government & Uncertainty</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
-    
-    body {
+
+    /* Prevent horizontal scrolling */
+    html, body {
       font-family: 'Lato', Arial, sans-serif;
       background-color: #EEEEEE;
       margin: 0;
@@ -18,18 +19,22 @@
       align-items: center;
       min-height: 100vh;
       font-size: 18px;
+      width: 100%;
+      overflow-x: hidden;
+      box-sizing: border-box;
     }
 
     .header {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 20px 40px;
+      padding: 20px 10px;
       border-bottom: 2px solid #333;
-      gap: 50px;
+      gap: 20px;
       flex-wrap: wrap;
       width: 100%;
       text-align: center;
+      max-width: 100%;
     }
 
     .title-container {
@@ -40,10 +45,11 @@
 
     .header .title {
       font-family: 'DM Sans', Arial, sans-serif;
-      font-size: 36px;
+      font-size: 32px; /* Slightly smaller for mobile */
       font-weight: bold;
       color: #333;
       text-decoration: none;
+      max-width: 100%;
     }
 
     .header .title:hover {
@@ -55,16 +61,20 @@
       color: #555;
       font-style: italic;
       margin-top: 5px;
+      text-align: center;
+      max-width: 100%;
     }
 
     .header nav {
       display: flex;
-      gap: 20px;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .header nav a {
       text-decoration: none;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
       color: #333;
     }
@@ -77,9 +87,10 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding: 30px;
+      padding: 20px;
+      width: 100%;
       max-width: 800px;
-      width: 90%;
+      box-sizing: border-box;
     }
 
     .page-title {
@@ -87,31 +98,25 @@
       font-weight: bold;
       color: #333;
       margin-bottom: 15px;
-      text-align: left;
-      max-width: 700px;
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
+      max-width: 100%;
     }
 
     .intro-text {
       font-size: 17px;
       color: #444;
       text-align: left;
-      max-width: 700px;
       line-height: 1.5;
       margin-bottom: 30px;
       width: 100%;
-      margin-left: auto;
-      margin-right: auto;
+      max-width: 700px;
     }
 
     .guide-links {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
       width: 100%;
+      gap: 15px;
     }
 
     .guide {
@@ -119,7 +124,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 15px;
       width: 100%;
       max-width: 500px;
       border: 2px solid #333;
@@ -149,20 +154,33 @@
     @media (max-width: 800px) {
       .header {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
+        padding: 15px 5px;
       }
+
+      .header .title {
+        font-size: 28px;
+      }
+
       .header nav {
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
       }
+
       .main-content {
+        padding: 15px;
         align-items: center;
         text-align: left;
       }
+
+      .page-title {
+        font-size: 24px;
+      }
+
       .intro-text {
         font-size: 16px;
-        text-align: justify;
       }
+
       .guide {
         width: 90%;
       }
