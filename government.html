@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Government & Uncertainty</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+    
+    body {
+      font-family: 'Lato', Arial, sans-serif;
+      background-color: #EEEEEE;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      font-size: 18px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 2px solid #333;
+      gap: 50px;
+      flex-wrap: wrap;
+      width: 100%;
+      text-align: center;
+    }
+
+    .title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header .title {
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-size: 36px;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .header .title:hover {
+      text-decoration: underline;
+    }
+
+    .header .tagline {
+      font-size: 16px;
+      color: #555;
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    .header nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header nav a {
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px;
+      max-width: 800px;
+      width: 90%;
+    }
+
+    .page-title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+      text-align: left;
+      max-width: 700px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .intro-text {
+      font-size: 17px;
+      color: #444;
+      text-align: left;
+      max-width: 700px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .guide-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .guide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      width: 100%;
+      max-width: 500px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      background-color: white;
+      text-decoration: none;
+      color: #333;
+      font-size: 20px;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+      text-align: center;
+    }
+
+    .guide:hover {
+      transform: scale(1.05);
+    }
+
+    .guide span {
+      font-size: 15px;
+      font-weight: normal;
+      color: #555;
+      margin-top: 5px;
+      text-align: center;
+    }
+
+    /* Mobile-friendly adjustments */
+    @media (max-width: 800px) {
+      .header {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .header nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .main-content {
+        align-items: center;
+        text-align: left;
+      }
+      .intro-text {
+        font-size: 16px;
+        text-align: justify;
+      }
+      .guide {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title-container">
+      <a href="index.html" class="title">Dealing With Uncertainty</a>
+      <div class="tagline">Clear and practical guides for evidence-based decision-making</div>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#who">Who We Are</a>
+    </nav>
+  </div>
+
+  <div class="main-content">
+    <h1 class="page-title">Government</h1>
+    <p class="intro-text">
+      In government, uncertainty is a fundamental part of decision-making. Policies must be based on the best available evidence, 
+      but it's also crucial to communicate limitations and unknowns effectively. Transparent handling of uncertainty builds trust 
+      and improves policy outcomes.
+    </p>
+
+    <div class="guide-links">
+      <a href="communicating-uncertainty.html" class="guide">
+        📖 Communicating Uncertainty
+        <span>Learn how to explain uncertainty clearly and responsibly in government communications.</span>
+      </a>
+      
+      <a href="uncertainty-policy.html" class="guide">
+        📖 Uncertainty for Policy-Making
+        <span>Understand how to incorporate uncertainty into policy decisions to improve outcomes.</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
