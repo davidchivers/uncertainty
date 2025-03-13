@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Communicating Uncertainty</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+    
+    body {
+      font-family: 'Lato', Arial, sans-serif;
+      background-color: #EEEEEE;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      font-size: 18px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 2px solid #333;
+      gap: 50px;
+      flex-wrap: wrap;
+      width: 100%;
+      text-align: center;
+    }
+
+    .title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header .title {
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-size: 36px;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .header .title:hover {
+      text-decoration: underline;
+    }
+
+    .header .tagline {
+      font-size: 16px;
+      color: #555;
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    .header nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header nav a {
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px;
+      max-width: 800px;
+      width: 90%;
+    }
+
+    .page-title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .expandable {
+      cursor: pointer;
+      color: #007BFF;
+      font-weight: bold;
+      display: inline-block;
+      margin-left: 10px;
+      padding: 5px 10px;
+      border: 1px solid #007BFF;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .expandable:hover {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    .hidden-content {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      border-left: 3px solid #007BFF;
+      background-color: #F9F9F9;
+      border-radius: 5px;
+    }
+
+    /* Mobile-friendly adjustments */
+    @media (max-width: 800px) {
+      .header {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .header nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+  <script>
+    function toggleContent(id) {
+      var content = document.getElementById(id);
+      if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+      } else {
+        content.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <div class="title-container">
+      <a href="index.html" class="title">Dealing With Uncertainty</a>
+      <div class="tagline">Clear and practical guides for evidence-based decision-making</div>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#who">Who We Are</a>
+    </nav>
+  </div>
+
+  <div class="main-content">
+    <h1 class="page-title">Communicating Uncertainty</h1>
+
+    <p>Whether in business, government, or organizations, communicating uncertainty is important for making informed decisions and maintaining trust.</p>
+
+    <p><strong>What is Uncertainty?</strong></p>
+    <p>Life is uncertain. While uncertainty can be reduced by gathering more information or consulting experts, it can never be entirely eliminated. Instead of avoiding uncertainty, we must find ways to communicate and manage it effectively.</p>
+
+    <p><strong>Why Does It Matter for Communication?</strong></p>
+    <p>Acknowledging uncertainty is crucial for trust. We should never pretend that outcomes are certain, as all decisions carry some degree of uncertainty. Misrepresenting certainty can lead to a loss of credibility when things do not go as expected.</p>
+
+    <p class="section-title"><strong>Key Communication Strategies:</strong></p>
+
+    <p><strong>1. Make Uncertainty Part of the Message</strong> <span class="expandable" onclick="toggleContent('example1')">Show Example</span></p>
+    <ul>
+      <li>Uncertainty should be part of the primary message, not just a secondary caveat.</li>
+      <li>The message should include the range of possible outcomes and their likelihoods.</li>
+      <li>If using quantitative expressions, clarify whether they are based on data or expert judgment.</li>
+    </ul>
+    <div id="example1" class="hidden-content">
+      <p>An example of making uncertainty part of the message might be a public health official stating: "Based on current data, we estimate that between 30-50% of people could be affected, though this may change as new information emerges."</p>
+    </div>
+
+    <p><strong>2. Explain How Uncertainty is Managed</strong> <span class="expandable" onclick="toggleContent('example2')">Show Example</span></p>
+    <ul>
+      <li>Communicate why a chosen option is a good one given the current state of knowledge.</li>
+      <li>Focus on communicating the level of confidence in a strategy.</li>
+      <li>Do not downplay uncertainty to reassure people—explain how decisions are made.</li>
+    </ul>
+    <div id="example2" class="hidden-content">
+      <p>A government might explain uncertainty by saying: "We have chosen this policy because 80% of experts agree it is the best option given what we know. If new data suggests otherwise, we will reassess our approach."</p>
+    </div>
+
+    <p><strong>3. Assembling Evidence and Acknowledging Uncertainty</strong> <span class="expandable" onclick="toggleContent('example3')">Show Example</span></p>
+    <ul>
+      <li>Experts should express uncertainty about findings and possible policy effects.</li>
+      <li>Describe the range of possible outcomes, their associated reasons, and their likelihoods.</li>
+      <li>Highlight deep uncertainties that cannot be fully assessed.</li>
+    </ul>
+    <div id="example3" class="hidden-content">
+      <p>For example, a climate scientist might say: "We estimate that sea levels could rise between 0.5 to 1.5 meters by 2100. The variation depends on factors such as global emissions and ice sheet stability, which have some uncertainties."</p>
+    </div>
+
+  </div>
+</body>
+</html>
